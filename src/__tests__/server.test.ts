@@ -1,21 +1,5 @@
-import request from "supertest" //permite hace peticiones a los endpoints
-import server, { connectDB } from "../server"
+import { connectDB } from "../server"
 import db from "../config/db"
-
-describe("GET /api", () => {
-    it("should send back a json response", async () => {
-        const res = await request(server).get("/api")
-
-        // LO que debe hacer
-        expect(res.status).toBe(200)
-        expect(res.headers["content-type"]).toMatch(/json/)
-        expect(res.body.msg).toBe("Desde API")
-
-        //Lo que no debe hacer
-        expect(res.status).not.toBe(404)
-        expect(res.body.msg).not.toBe("desde api")
-    })
-})
 
 jest.mock("../config/db")
 

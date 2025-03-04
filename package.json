@@ -6,7 +6,7 @@
   "author": "Facundo Fernández",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon --exec ts-node src/index.ts",
+    "dev": "nodemon --exec ts-node dist/index.js",
     "build": "tsc ",
     "test": "jest --detectOpenHandles",
     "test:coverage": "npm run pretest && jest --detectOpenHandles --coverage",
